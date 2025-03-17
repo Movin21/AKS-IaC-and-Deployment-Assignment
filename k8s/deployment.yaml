@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: echoserver
+  name: nginx
 spec:
   replicas: 2 
   selector:
     matchLabels:
-      app: echoserver
+      app: nginx
   template:
     metadata:
       labels:
-        app: echoserver 
+        app: nginx 
     spec:
       containers:
-      - name: echoserver
-        image: k8s.gcr.io/echoserver:1.4 
-        ports:
-        - containerPort: 8080 
+        - name: nginx
+          image: nginx:latest 
+          ports:
+            - containerPort: 80 
