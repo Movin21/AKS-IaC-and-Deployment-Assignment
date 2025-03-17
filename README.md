@@ -2,7 +2,7 @@
 
 ## Overview
 
-Visit `http://128.203.121.40` (currently running instance)
+Visit [`http://128.203.121.40`](http://128.203.121.40) (currently running instance)
 
 This project sets up an Azure Kubernetes Service (AKS) cluster using Terraform and deploys an `nginx` web server with 2 replicas, exposed via a LoadBalancer. It includes a bash script for automation and a loop to ensure the external IP is assigned. All code is in this public GitHub repo.
 
