@@ -8,4 +8,3 @@ terraform.tfvars
 .terraform.lock.hcl
 # Editor files
 .vscode/
-deploy.sh
