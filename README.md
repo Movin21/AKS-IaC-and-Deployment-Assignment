@@ -81,8 +81,6 @@ Tried adding HTTPS with a self-signed TLS certificate, but it caused browser war
 
 ## Challenges and Solutions
 
-## Challenges and Solutions
-
 1. **External IP Delay**:
 
    - **Hiccup**: The LoadBalancer IP sometimes took longer than expected to assign.
