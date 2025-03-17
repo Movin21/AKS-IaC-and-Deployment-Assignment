@@ -1,0 +1,11 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+terraform.tfvars
+*.tfvars
+.terraform.lock.hcl
+# Editor files
+.vscode/
+deploy.sh
