@@ -2,7 +2,7 @@
 
 ## Overview
 
-Visit [`http://128.203.121.40`](http://128.203.121.40) (currently running instance)
+Visit [`http://57.151.73.159`](http://57.151.73.159) (currently running instance)
 
 This project sets up an Azure Kubernetes Service (AKS) cluster using Terraform and deploys an `nginx` web server with 2 replicas, exposed via a LoadBalancer. It includes a bash script for automation and a loop to ensure the external IP is assigned. All code is in this public GitHub repo.
 
@@ -72,6 +72,8 @@ This project sets up an Azure Kubernetes Service (AKS) cluster using Terraform a
 
 ## Challenges and Solutions
 
+## Challenges and Solutions
+
 1. **External IP Delay**:
 
    - **Hiccup**: The LoadBalancer IP sometimes took longer than expected to assign.
@@ -82,7 +84,12 @@ This project sets up an Azure Kubernetes Service (AKS) cluster using Terraform a
    - **Hiccup**: AzureRM 4.0+ requires a subscription key in the provider block, complicating setup.
    - **Fix**: Used `~> 3.0` in `provider.tf` to rely on `az login` authentication, making deployment simpler for this assignment.
 
-3. **Learning Curve**:
+3. **HTTPS Attempt**:
+
+   - **Hiccup**: Tried adding HTTPS with a self-signed TLS certificate, but it caused browser warnings and added complexity.
+   - **Fix**: Reverted to HTTP to keep the demo simple and avoid self-signed cert warnings for reviewers.
+
+4. **Learning Curve**:
    - **Hiccup**: New to AKS and Terraform syntax.
    - **Fix**: Used the [Terraform AKS Guide](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster) and trial-and-error to get it working.
 

@@ -39,7 +39,7 @@ kubectl apply -f k8s/service.yaml || { echo -e "${RED}Service apply failed${NC}"
 
 # Wait for the external IP to be assigned with a loop
 echo "Waiting for LoadBalancer to assign an external IP..."
-MAX_ATTEMPTS=3  # 3 attempts = 2 minutes (10 seconds each)
+MAX_ATTEMPTS=6  # 6 attempts = 2 minutes (10 seconds each)
 ATTEMPT=1
 
 while [ $ATTEMPT -le $MAX_ATTEMPTS ]; do
