@@ -4,6 +4,9 @@
 
 Visit [`http://51.8.25.138/`](http://51.8.25.138/) (currently running instance)
 
+![image](https://github.com/user-attachments/assets/64eda0b8-b485-4d17-9817-163a7ca56674)
+
+
 This project sets up an Azure Kubernetes Service (AKS) cluster using Terraform and deploys an `nginx` web server with 2 replicas, exposed via a LoadBalancer. It includes a bash script for automation and a loop to ensure the external IP is assigned. All code is in this public GitHub repo.
 
 ## Steps to Set Up the AKS Cluster
@@ -30,6 +33,9 @@ This project sets up an Azure Kubernetes Service (AKS) cluster using Terraform a
    - Fetched kubeconfig: `az aks get-credentials --resource-group aks-assignment-rg --name my-aks-cluster`
    - Verified: `kubectl get nodes` (saw 2 nodes).
 
+  ![image](https://github.com/user-attachments/assets/eb6e65ec-c7f6-43a1-96e3-6418fe9b3a4f)
+
+
 ## How I Deployed the App
 
 1. **Wrote Kubernetes YAMLs**:
@@ -52,13 +58,19 @@ This project sets up an Azure Kubernetes Service (AKS) cluster using Terraform a
 ## How to Check It’s Working
 
 1. **Verify Pods**:
+   
+![image](https://github.com/user-attachments/assets/a64f46bb-c8ac-489d-b80d-9e03aa590fc5)
 
    - `kubectl get pods`
    - Look for 2 `nginx` pods with `STATUS: Running` and `READY: 1/1`.
 
-2. **Get External IP**:
+3. **Get External IP**:
 
    - `kubectl get service nginx-service`
+
+![image](https://github.com/user-attachments/assets/22cc2808-5b6c-4bb8-9db5-7f44f99957f1)
+
+
    - Note the `EXTERNAL-IP` (e.g., `4.156.88.136` or currently `http://51.8.25.138/`).
 
 3. **Test the App**:
