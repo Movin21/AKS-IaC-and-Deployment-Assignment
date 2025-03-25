@@ -2,7 +2,7 @@
 
 ## Overview
 
-Visit [`http://51.8.25.138/`](http://51.8.25.138/) (Unfortunately My cloud credits ran out)
+Visit  (Unfortunately My cloud credits ran out)
 
 **Deployment is Automated - simply run deploy.sh script**
 
